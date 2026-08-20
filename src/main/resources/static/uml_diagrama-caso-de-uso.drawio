@@ -22,7 +22,7 @@
         <mxCell id="qR_HBy2BW61I3IRm5iy3-14" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1" value="Administrador / funcionário" vertex="1">
           <mxGeometry height="100" width="40" x="661" y="323" as="geometry" />
         </mxCell>
-        <mxCell id="qR_HBy2BW61I3IRm5iy3-15" edge="1" parent="1" source="qR_HBy2BW61I3IRm5iy3-14" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;entryX=0.593;entryY=0.957;entryDx=0;entryDy=0;entryPerimeter=0;" target="qR_HBy2BW61I3IRm5iy3-10" value="">
+        <mxCell id="qR_HBy2BW61I3IRm5iy3-15" edge="1" parent="1" source="qR_HBy2BW61I3IRm5iy3-14" style="endArrow=open;endFill=1;endSize=12;html=1;rounded=0;" target="qR_HBy2BW61I3IRm5iy3-10" value="">
           <mxGeometry relative="1" width="160" as="geometry">
             <mxPoint x="640" y="440" as="sourcePoint" />
             <mxPoint x="490" y="370" as="targetPoint" />
