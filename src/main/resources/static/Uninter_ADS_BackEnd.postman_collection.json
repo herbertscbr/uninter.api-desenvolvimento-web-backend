@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "efe4d627-765a-4b54-b6c0-db0fe466e074",
+		"name": "Uninter - ADS - BackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PRODUTOS",
+			"item": [
+				{
+					"name": "post - cadastra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estoque\": true,\n    \"nome\": \"A Máquina do Tempo\",\n    \"preco\": 40.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos"
+							]
+						},
+						"description": "🔹 POST - Criar Produto\nhttp\n\n=> POST http://localhost:8080/api/produtos\nContent-Type: application/json\n{\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (200 OK):\njson\n\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (400 Bad Request):\n{\n    \"timestamp\": \"2026-08-16T22:30:00\",\n    \"status\": 400,\n    \"error\": \"Erro de validação\",\n    \"errors\": {\n        \"nome\": \"Nome do Produto é obrigatório\"\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - cadastra",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"estoque\": true,\n    \"nome\": \"A Máquina do Tempo\",\n    \"preco\": 40.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/produtos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"1"
+							]
+						},
+						"description": "🔹 POST - Criar Produto\nhttp\n\n=> POST http://localhost:8080/api/produtos\nContent-Type: application/json\n{\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (200 OK):\njson\n\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (400 Bad Request):\n{\n    \"timestamp\": \"2026-08-16T22:30:00\",\n    \"status\": 400,\n    \"error\": \"Erro de validação\",\n    \"errors\": {\n        \"nome\": \"Nome do Produto é obrigatório\"\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/produtos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos"
+							]
+						},
+						"description": "🔹 GET - Listar Todos\n\nGET http://localhost:8080/api/produtos\n\nResposta (200 OK):\n[\n    {\n        \"id\": 1,\n        \"nome\": \"Admirável Mundo Novo\",\n        \"preco\": 50.00,\n        \"estoque\": true\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"1984\",\n        \"preco\": 45.90,\n        \"estoque\": false\n    }\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/produtos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"1"
+							]
+						},
+						"description": "🔹 GET - Buscar por ID\n\n=> GET http://localhost:8080/api/produtos/1\n\n- Resposta (200 OK):\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n- Resposta (404 Not Found)"
+					},
+					"response": []
+				},
+				{
+					"name": "delete - apaga um registro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/produtos/40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"produtos",
+								"40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CLIENTES",
+			"item": [
+				{
+					"name": "post - cadastra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Herbert D C de Souza | RU: 5046279\",\n    \"clienteDesde\": \"2026-08-15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						},
+						"description": "🔹 POST - Criar Produto\nhttp\n\n=> POST http://localhost:8080/api/produtos\nContent-Type: application/json\n{\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (200 OK):\njson\n\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (400 Bad Request):\n{\n    \"timestamp\": \"2026-08-16T22:30:00\",\n    \"status\": 400,\n    \"error\": \"Erro de validação\",\n    \"errors\": {\n        \"nome\": \"Nome do Produto é obrigatório\"\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes"
+							]
+						},
+						"description": "🔹 GET - Listar Todos\n\nGET http://localhost:8080/api/produtos\n\nResposta (200 OK):\n[\n    {\n        \"id\": 1,\n        \"nome\": \"Admirável Mundo Novo\",\n        \"preco\": 50.00,\n        \"estoque\": true\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"1984\",\n        \"preco\": 45.90,\n        \"estoque\": false\n    }\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						},
+						"description": "🔹 GET - Buscar por ID\n\n=> GET http://localhost:8080/api/produtos/1\n\n- Resposta (200 OK):\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n- Resposta (404 Not Found)"
+					},
+					"response": []
+				},
+				{
+					"name": "delete - apaga um registro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/clientes/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"clientes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PEDIDOS",
+			"item": [
+				{
+					"name": "post - cadastra",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"quantidade\": 2,\n        \"cliente\": {\n\t        \"id\": 1\n\t    },\n\t    \"produto\": {\n\t        \"id\": 1\n\t    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedidos"
+							]
+						},
+						"description": "🔹 POST - Criar Produto\nhttp\n\n=> POST http://localhost:8080/api/produtos\nContent-Type: application/json\n{\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (200 OK):\njson\n\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n=> Resposta (400 Bad Request):\n{\n    \"timestamp\": \"2026-08-16T22:30:00\",\n    \"status\": 400,\n    \"error\": \"Erro de validação\",\n    \"errors\": {\n        \"nome\": \"Nome do Produto é obrigatório\"\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca todos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedidos"
+							]
+						},
+						"description": "🔹 GET - Listar Todos\n\nGET http://localhost:8080/api/produtos\n\nResposta (200 OK):\n[\n    {\n        \"id\": 1,\n        \"nome\": \"Admirável Mundo Novo\",\n        \"preco\": 50.00,\n        \"estoque\": true\n    },\n    {\n        \"id\": 2,\n        \"nome\": \"1984\",\n        \"preco\": 45.90,\n        \"estoque\": false\n    }\n]"
+					},
+					"response": []
+				},
+				{
+					"name": "get - busca por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pedidos/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedidos",
+								"3"
+							]
+						},
+						"description": "🔹 GET - Buscar por ID\n\n=> GET http://localhost:8080/api/produtos/1\n\n- Resposta (200 OK):\n{\n    \"id\": 1,\n    \"nome\": \"Admirável Mundo Novo\",\n    \"preco\": 50.00,\n    \"estoque\": true\n}\n\n\n- Resposta (404 Not Found)"
+					},
+					"response": []
+				},
+				{
+					"name": "delete - apaga um registro",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/pedidos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"pedidos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
